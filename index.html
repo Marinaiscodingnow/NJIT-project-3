@@ -46,8 +46,17 @@
 						<p class="websites">Websites: <a href="{{movie[0].imdb}}"> imdb </a> | <a href="{{movie[0].website}}">website</a></p>
 
 			            <div class="social">
-			              <p class="likes" @click = "movie.likes++"><i class="bi bi-hand-thumbs-up" aria-hidden="true"></i> {{movie.likes}}</p>
-			              <p class="dislikes" @click = "movie.dislikes++"><i class="bi bi-hand-thumbs-down"></i> {{movie.dislikes}}</p>
+
+						  <p class="likes" @click="toggleLikes" >
+							<span v-if="likes"><i class="bi bi-hand-thumbs-up" aria-hidden="true"></i>{{movie.likes}}</span>
+							<span v-else><i class="bi bi-hand-thumbs-up" aria-hidden="true"></i>{{movie.likes + 1}}</span>
+						  </p>
+
+						  <p class="dislikes" @click="toggleDislikes" >
+							<span v-if="dislikes"><i class="bi bi-hand-thumbs-down"></i>{{movie.dislikes}}</span>
+							<span v-else><i class="bi bi-hand-thumbs-down"></i>{{movie.dislikes + 1}}</span>
+						  </p>
+
 			            </div>
 	            </div>
 	        </div>
