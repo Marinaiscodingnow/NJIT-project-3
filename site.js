@@ -45,6 +45,8 @@ const vue_app = Vue.createApp({
       methods: {
             /* ADD FUNCTIONS/METHODS FOR STEP 7 HERE */
             getMonthText(dateArray){
+                  var months = [,'jan','feb','mar','apr','may','jun',
+                                 'jul','aug','sep','oct','nov','dec'];
 
             },
 
@@ -54,7 +56,18 @@ const vue_app = Vue.createApp({
 
               toggleDislikes(){
                   this.dislikes = !this.dislikes
+              },
+
+              posterClick(index)
+              {
+                  
+              },
+              timeText(minutes) 
+              {
+                  
+
               }
+
       }
 })
 
