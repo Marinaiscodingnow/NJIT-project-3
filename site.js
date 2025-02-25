@@ -34,6 +34,8 @@ const vue_app = Vue.createApp({
             // This holds your movies.json data.
             movies: [],
             /* ADD ADDITIONAL VARIABLES FOR STEP 3 HERE */
+            months: [,'January','February','March','April','May','June','July','August','September','October','November','December'],
+            hours:0,
             likes: true,
             dislikes: true,
             Title:"IMDB + Marina's Top 8 Movies",
@@ -45,27 +47,25 @@ const vue_app = Vue.createApp({
       methods: {
             /* ADD FUNCTIONS/METHODS FOR STEP 7 HERE */
             getMonthText(dateArray){
-                  var months = [,'jan','feb','mar','apr','may','jun',
-                                 'jul','aug','sep','oct','nov','dec'];
+                  var year = dateArray[0];
+                  var month = this.months[dateArray[1]-1];
+                  var day = dateArray[2];
+                  return month + ',' +day + ',' + year;
+                  
 
             },
 
-            toggleLikes(){
-                  this.likes = !this.likes
-              },
-
-              toggleDislikes(){
-                  this.dislikes = !this.dislikes
-              },
-
               posterClick(index)
               {
-                  
+                  const movie = this.movies[index];
+                  movie.posterindex = (movie.posterindex + 1) % movie.posters.length;
               },
+
               timeText(minutes) 
               {
-                  
-
+                  const hours = Math.trunc(minutes/60);
+                  const mins = minutes % 60;
+                  return hours + "h " + mins +"m";
               }
 
       }
