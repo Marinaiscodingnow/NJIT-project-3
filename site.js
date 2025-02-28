@@ -50,7 +50,7 @@ const vue_app = Vue.createApp({
                   var year = dateArray[0];
                   var month = this.months[dateArray[1]-1];
                   var day = dateArray[2];
-                  return month + ', ' +day + ', s' + year;
+                  return month + ', ' +day + ', ' + year;
                   
 
             },

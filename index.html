@@ -23,11 +23,13 @@
 	<div id="vue_app" class="container">
 
 	    <div class="header">
-
+<br>
+<br>
 	      <div class="container">
-	        <h1 id="app_title">{{ Title }}</h1>
+	        <h1 id="app_title" style="text-align: center;">{{ Title }}</h1>
 	      </div>
-
+<br>
+<br>
 	    </div>
 
 	    <div class="main">
@@ -43,7 +45,7 @@
 						<p class="score"><i class="bi bi-star" aria-hidden="true"></i> {{movie.iscore}} </p>
 						<p class="runtime">Runtime: {{timeText (movie.runtime) }}</p>
 						<p class="released">Released: {{getMonthText (movie.released) }} | Rated: {{movie.rating}}</p>
-						<p class="websites">Websites: <a href="{{movie[0].imdb}}"> imdb </a> | <a href="{{movie[0].website}}">website</a></p>
+						<p class="websites">Websites: <a :href="movie.imdb"> imdb </a> | <a :href="movie.website">website</a></p>
 
 			            <div class="social">
 

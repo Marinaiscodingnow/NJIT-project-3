@@ -5,7 +5,9 @@ body {
     padding: 0;
     width: 100%;
     overflow: auto;
-    background-image: url(img/geometry.jpg);
+    background-image: url(img/bg.png);
+    background-position: center;
+    background-size: contain;
 }
 
 /* This stylizes the header area */
@@ -19,8 +21,8 @@ body {
 
 /* This stylizes the main page area */
 .main {
-    background-color: #f2f2f2;
-    padding: 40px 0;
+    background-color: #d6616171;
+    padding: 20px 0;
 }
 
 /* This stylizes the poster area and poster images */
@@ -30,19 +32,19 @@ body {
     padding: 20px;
     margin: 20px;
     border-radius: 0;
-    background-color:#dddddd;
+    background-color:#00000081;
 }
 .thumbnail img {
     margin-top: 10px;
     margin-bottom: 30px;
-
+    width: 700px;
     padding: 5px;
     border: 2px dashed black;
 }
 
 /* This stylizes your "Poster X of Y" text */
 .imageInfo {
-	color: #959595;
+	color: #ffffff;
 	font-style: italic;
 	font-size: x-small;
 	float: right;
@@ -52,14 +54,14 @@ body {
 /* This stylizes your Title and Rating Text */
 .title,
 .released {
-    color: #444;
+    color: #ffffff;
     margin: 0;
     font-size: 18px;
     font-weight: 800;
 }
 .released,
 .rated {
-    color: #5d5d5d;
+    color: #ffffff;
     font-size: 14px;
     font-weight: 200;
 }
@@ -81,6 +83,11 @@ body {
     right: 35px;
 }
 
+.runtime,
+.websites {
+    color: white;
+}
+
 /* This contains your like and dislike buttons */
 .social {
     text-align: right;
@@ -99,6 +106,7 @@ body {
     display: inline-block;
     font-size: 15px;
     line-height: 40px;
+    color: #ffffff;
     min-width: 70px;
     height: 40px;
     border-radius: 50%;
@@ -129,7 +137,7 @@ body {
 
 .likes
 {
-    background-color: #00b9535d;
+    background-color: #00b953ab;
 }
 
 .dislikes:hover
@@ -139,5 +147,5 @@ body {
 
 .dislikes
 {
-    background-color: #b900005d;
+    background-color: #b9000091;
 }
